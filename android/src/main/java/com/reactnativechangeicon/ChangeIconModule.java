@@ -100,9 +100,8 @@ public class ChangeIconModule extends ReactContextBaseJavaModule implements Appl
 
         this.componentClass = activeClass;
         activity.getApplication().registerActivityLifecycleCallbacks(this);
-        activity.moveTaskToBack(true);
+        activity.finishAffinity();
         System.exit(0);
-
     }
 
     private void completeIconChange() {
